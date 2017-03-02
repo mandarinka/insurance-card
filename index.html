@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Тестовове задание</title>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Place favicon.ico and apple-touch-icon(s) in the root directory -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container-fluid">
+        <form class="form-inline filter">
+            <div class="form-group">
+                <div class="filter-label">Период</div>
+            </div>
+            <div class="form-group">
+                <label class="date-picker-ico">
+                    <input type="text" class="form-control js-date-picker js-date-start">
+                </label>
+            </div>
+            <div class="form-group">
+                <div class="divider">&mdash;</div>
+            </div>
+            <div class="form-group">
+                <label class="date-picker-ico">
+                    <input type="text" class="form-control js-date-picker js-date-end">
+                </label>
+            </div>
+            <div class="form-group">
+                <button type="button" class="btn btn-default">Показать</button>
+            </div>
+        </form>
+        <!-- /.form-inline filter -->
+
+        <form class="form-inline filter">
+            <div class="form-group">
+                <div class="filter-label">Номер полиса</div>
+            </div>
+            <div class="form-group">
+                <input type="text" class="form-control" value="010101001">
+            </div>
+            <div class="form-group">
+                <button type="button" class="btn btn-default">Найти</button>
+            </div>
+        </form>
+        <!-- /.form-inline filter -->
+
+        <div class="table-responsive">
+            <table class="table table-summary">
+                <thead>
+                    <tr>
+                        <th>Номер полиса</th>
+                        <th>Подключение</th>
+                        <th>Отключение</th>
+                        <th>Тип страховки</th>
+                        <th>Страх. выплата</th>
+                        <th colspan="3">Статус полиса</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><a href="#">0000000001</a></td>
+                        <td>01.01.2016 14:43</td>
+                        <td>17.04.2016 18:20</td>
+                        <td>Название типа</td>
+                        <td>400 000 руб.</td>
+                        <td><span class="text-success">Действует до 17.04.2016</span></td>
+                        <td><span class="btn-dashed">Статистика оплаты</span></td>
+                        <td><span class="btn-dashed js-popover">О страхователе</span></td>
+                    </tr>
+                    <tr>
+                        <td><a href="#">0000000001</a></td>
+                        <td>01.01.2016 14:43</td>
+                        <td>17.04.2016 18:20</td>
+                        <td>Название типа</td>
+                        <td>400 000 руб.</td>
+                        <td>Начнет действовать с 17.04.2016</td>
+                        <td><span class="btn-dashed">Статистика оплаты</span></td>
+                        <td><span class="btn-dashed js-popover">О страхователе</span></td>
+                    </tr>
+                    <tr>
+                        <td><a href="#">0000000001</a></td>
+                        <td>01.01.2016 14:43</td>
+                        <td>17.04.2016 18:20</td>
+                        <td>Название типа</td>
+                        <td>400 000 руб.</td>
+                        <td><span class="text-danger">Не действует с 17.04.2016</span></td>
+                        <td><span class="btn-dashed">Статистика оплаты</span></td>
+                        <td><span class="btn-dashed js-popover">О страхователе</span></td>
+                    </tr>
+                    <tr>
+                        <td><a href="#">0000000001</a></td>
+                        <td>01.01.2016 14:43</td>
+                        <td>17.04.2016 18:20</td>
+                        <td>Название типа</td>
+                        <td>400 000 руб.</td>
+                        <td><span class="text-danger">Не действует с 17.04.2016</span></td>
+                        <td><span class="btn-dashed">Статистика оплаты</span></td>
+                        <td><span class="btn-dashed js-popover">О страхователе</span></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <!-- /.table-responsive -->
+    </div>
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script src="js/common.js"></script>
+</body>
+</html>
