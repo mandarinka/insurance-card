@@ -14,11 +14,11 @@ $(document).ready(function () {
     $('.js-date-start').datepicker("setDate", dateStart);
     $('.js-date-end').datepicker("setDate", dateEnd);
 
-    var popoverTemplate = [
-        '<div class="popover" role="tooltip">',
-            '<div class="arrow"></div>',
-            '<span class="close js-dismis-popover">&times;</span>',
-            '<div class="popover-content"></div>',
+    var popoverTemplateCustom = [
+        '<div class="popover-custom" role="tooltip">',
+            '<div class="arrow popover-custom-arrow"></div>',
+            '<span class="popover-custom-close js-dismis-popover">&times;</span>',
+            '<div class="popover-custom-content popover-content"></div>',
         '</div>'
     ].join('');
 
@@ -37,17 +37,23 @@ $(document).ready(function () {
         '</div>',
     ].join('');
 
-    $('.js-popover').popover({
+    $('.js-popover-custom').popover({
         container: 'body',
-        template: popoverTemplate,
-        content: popoverContent,
+        template: popoverTemplateCustom,
         placement: "bottom",
-        html: true
+        html: true,
+        content:  function () {
+            return popoverContent;
+        },
     });
 });
 
-$(document).on('click', '.js-dismis-popover', function () {
-    $(this).closest('.popover').popover('hide');
-});
+$(document)
+    .on('hidden.bs.popover', function (e) {
+        $(e.target).data("bs.popover").inState = { click: false, hover: false, focus: false }
+    })
+    .on('click', '.js-dismis-popover', function () {
+        $(this).closest('.popover-custom').popover('hide');
+    });
 
 

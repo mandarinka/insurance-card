@@ -10,6 +10,7 @@ body,
 .container-fluid {
     padding-top: 25px;
     padding-bottom: 25px;
+    box-sizing: border-box;
 }
 .filter {
     margin-bottom: 10px;
@@ -46,23 +47,6 @@ body,
 .btn-dashed:hover {
     border-bottom-color: transparent;
 }
-
-.popover {
-    box-shadow: none;
-    min-width: 330px;
-    box-sizing: border-box;
-}
-.popover-content {
-    padding: 15px;
-    font-size: 12px;
-}
-.popover .close {
-    font-weight: normal;
-    font-size: 24px;
-    margin-right: 15px;
-    margin-left: 5px;
-    margin-top: 15px;
-}
 .information {
     margin-top: 25px;
 }
@@ -93,4 +77,81 @@ body,
 }
 .date-picker-ico > input {
     padding-right: 30px;
+    font-weight: normal;
+}
+
+/* Popover custom
+---------------------------------------------------------------------*/
+.popover-custom {
+    position: absolute;
+    top: 0;
+    z-index: 1060;
+    display: none;
+    min-width: 330px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    margin-top: 10px;
+}
+.popover-custom-content.popover-content {
+    padding: 15px;
+    font-size: 12px;
+}
+.popover-custom-arrow {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    margin: auto; 
+    width: 0;
+    height: 0;
+}
+.popover-custom-close {
+    display: inline-block;
+    float: right;
+    margin-left: 5px;
+    margin-top: 10px;
+    margin-right: 15px;
+    font-size: 24px;
+    font-weight: 300;
+    line-height: 1;
+    cursor: pointer;
+    color: #999;
+    font-family: "Times New Roman", serif;
+}
+.popover-custom-close:hover {
+    opacity: 0.7;
+}
+.popover-custom-arrow {
+    position: absolute;
+    display: block;
+    width: 0;
+    height: 0;
+    border-color: transparent;
+    border-style: solid;
+    border-top-width: 0;
+    border-bottom-width: 8px;
+    border-left-width: 15px;
+    border-right-width: 15px;
+    border-bottom-color: #ccc;
+    top: -8px;
+    margin-left: -15px;
+}
+.popover-custom-arrow:before {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 0;
+    height: 0;
+    border-color: transparent;
+    border-style: solid;
+    border-bottom-width: 8px;
+    border-left-width: 14px;
+    border-right-width: 14px;
+    border-bottom-color: #fff;
+    top: -2px;
+    margin-left: -14px;
 }
